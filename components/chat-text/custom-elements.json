@@ -2,16 +2,8 @@
   "version": "experimental",
   "tags": [
     {
-      "name": "alc-button-primary",
-      "path": "./components/button-primary/alc-button-primary.js"
-    },
-    {
-      "name": "alc-button-secondary",
-      "path": "./components/button-secondary/alc-button-secondary.js"
-    },
-    {
       "name": "alc-chat-text",
-      "path": "./components/chat-text/alc-chat-text.js",
+      "path": "./alc-chat-text.js",
       "description": "Chat text bubble",
       "attributes": [
         {
