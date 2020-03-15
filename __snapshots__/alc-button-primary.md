@@ -22,6 +22,5 @@
 #### `Light DOM`
 
 ```html
-button
-<button aria-hidden="true" slot="_button" tabindex="-1" type="submit"></button>
+button <button aria-hidden="true" slot="_button" tabindex="-1" type="submit"></button>
 ```

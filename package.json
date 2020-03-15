@@ -25,7 +25,7 @@
     "lint": "yarn lint:eslint && yarn lint:prettier",
     "lint:eslint": "eslint --ext .js,.html,.md,.json . --ignore-path .gitignore",
     "lint:prettier": "prettier \"**/*.+(js|html|md|json)\" --check --ignore-path .gitignore",
-    "nuke": "lerna exec \"rm -f yarn.lock\" && lerna clean --yes && lerna bootstrap && lerna exec --stream -- \"test -f yarn.lock || yarn install --frozen-lockfile\"",
+    "nuke": "rm -rf yarn.lock && lerna exec \"rm -f yarn.lock\" && lerna clean --yes && lerna bootstrap && lerna exec --stream -- \"test -f yarn.lock || yarn install --frozen-lockfile\"",
     "publish": "lerna publish from-package --contents pkg",
     "release": "lerna version",
     "start": "es-dev-server --root",

@@ -6,6 +6,7 @@ module.exports = config => {
   const prefix = config.root ? '{components,mixins}/*' : process.env.PWD;
   config.set(
     merge(createDefaultConfig(config), {
+      failOnEmptyTestSuite: false,
       files: [
         // runs all files ending with .test in the test folder,
         // can be overwritten by passing a --grep flag. examples:
