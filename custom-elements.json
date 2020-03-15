@@ -10,6 +10,77 @@
       "path": "./components/button-secondary/alc-button-secondary.js"
     },
     {
+      "name": "alc-chat-form",
+      "path": "./components/chat-form/alc-chat-form.js",
+      "description": "Chat form",
+      "attributes": [
+        {
+          "name": "icon",
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "accessibleDescription",
+          "type": "string",
+          "default": "\"Enviar mensaje\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "icon",
+          "attribute": "icon",
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "attribute": "value",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "accessibleDescription",
+          "attribute": "accessibleDescription",
+          "type": "string",
+          "default": "\"Enviar mensaje\""
+        }
+      ],
+      "events": [
+        {
+          "name": "alc-chat-form-send",
+          "description": "Fired when send button is clicked"
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--alc-chat-form-textarea-background",
+          "description": "textarea background color",
+          "default": "\"#f3f7f9\""
+        },
+        {
+          "name": "--alc-chat-form-textarea-color",
+          "description": "textarea color",
+          "default": "\"#000000\""
+        },
+        {
+          "name": "--alc-chat-form-font-size",
+          "description": "textarea font size",
+          "default": "\"16px\""
+        }
+      ],
+      "cssParts": [
+        {
+          "name": "container"
+        },
+        {
+          "name": "icon-send"
+        }
+      ]
+    },
+    {
       "name": "alc-chat-text",
       "path": "./components/chat-text/alc-chat-text.js",
       "description": "Chat text bubble",
