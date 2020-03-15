@@ -1,0 +1,9 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "alc-button-primary",
+      "path": "./alc-button-primary.js"
+    }
+  ]
+}

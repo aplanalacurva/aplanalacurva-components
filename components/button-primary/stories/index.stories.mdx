@@ -1,0 +1,36 @@
+import { Story, Preview, Meta, Props, action } from '@open-wc/demoing-storybook';
+import { html } from 'lit-html';
+import '../alc-button-primary.js';
+
+<Meta
+  title="Aplana la curva"
+  parameters={{
+    component: "alc-button-primary",
+    options: { selectedPanel: "storybookjs/knobs/panel" }
+  }}
+/>
+
+# Button
+
+Primary buttons is used for the most important call to action on a given page and there should only be one large primary call to action per page. Inactive button state appears when the customer has to do something obligatory to activate the button (e.g. when filling in mandatory sections of certain forms).
+
+## How to use
+
+### Installation
+
+```bash
+npm install --save @aplanalacurba/button-primary
+yarn add @aplanalacurba/button-primary
+```
+
+```js
+import '@aplanalacurba/button-primary/alc-button-primary';
+```
+
+<Preview withToolbar>
+  <Story name="Button Primary">
+    {html`
+      <alc-button-primary>Primary</alc-button-primary>
+    `}
+  </Story>
+</Preview>

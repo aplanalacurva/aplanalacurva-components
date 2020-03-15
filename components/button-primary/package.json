@@ -1,0 +1,35 @@
+{
+  "name": "@aplanalacurva/button-primary",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "index.js",
+  "module": "index.js",
+  "scripts": {
+    "analyze": "wca analyze ./*-*.js --outFile custom-elements.json",
+    "build": "pika build",
+    "format": "yarn format:eslint && yarn format:prettier",
+    "format:eslint": "eslint --ext .js,.html . --fix --ignore-path ../../.gitignore",
+    "format:prettier": "prettier \"**/*.js\" --write  --ignore-path ../../.gitignore",
+    "lint": "yarn lint:eslint && yarn lint:prettier",
+    "lint:eslint": "eslint --ext .js,.html . --ignore-path ../../.gitignore",
+    "lint:prettier": "prettier \"**/*.js\" --check  --ignore-path ../../.gitignore",
+    "start": "es-dev-server --config ../../es-dev-server.config.js",
+    "storybook": "start-storybook --config ../../es-dev-server.config.js --stories \"$(pwd)/stories/*.stories.{js,mdx}\"",
+    "storybook:build": "build-storybook --stories \"$(pwd)/stories/*.stories.{js,mdx}\"",
+    "storybook:build:serve": "es-dev-server --open --app-index storybook-static/index.html",
+    "test": "karma start ../../karma.conf.js --coverage",
+    "test:bs": "karma start ../../karma.bs.config.js --coverage",
+    "test:update-snapshots": "karma start ../../karma.conf.js --update-snapshots",
+    "test:watch": "karma start ../../karma.conf.js --auto-watch=true --single-run=false"
+  },
+  "dependencies": {
+    "@lion/button": "^0.5.9",
+    "lit-element": "^2.0.0"
+  },
+  "devDependencies": {
+    "@open-wc/demoing-storybook": "^1.0.0",
+    "@open-wc/testing": "^2.0.0",
+    "es-dev-server": "^1.0.0",
+    "lit-html": "^1.0.0"
+  }
+}
