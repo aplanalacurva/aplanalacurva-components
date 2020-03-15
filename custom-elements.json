@@ -1,0 +1,128 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "alc-chat-bot",
+      "path": "./components/chat-bot/alc-chat-bot.js",
+      "attributes": [
+        {
+          "name": "close-image",
+          "type": "string"
+        },
+        {
+          "name": "opened",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "api",
+          "type": "string",
+          "default": "\"https://dev-aplanalacurva.herokuapp.com/resolve\""
+        },
+        {
+          "name": "error-message",
+          "type": "string",
+          "default": "\"Lo sentimos, en estos momentos no podemos atenderle. Inténtelo más tarde.\""
+        },
+        {
+          "name": "messages",
+          "type": "array",
+          "default": "[]"
+        },
+        {
+          "name": "logo",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "closeImg",
+          "attribute": "close-image",
+          "type": "string"
+        },
+        {
+          "name": "opened",
+          "attribute": "opened",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "api",
+          "attribute": "api",
+          "type": "string",
+          "default": "\"https://dev-aplanalacurva.herokuapp.com/resolve\""
+        },
+        {
+          "name": "errorMessage",
+          "attribute": "error-message",
+          "type": "string",
+          "default": "\"Lo sentimos, en estos momentos no podemos atenderle. Inténtelo más tarde.\""
+        },
+        {
+          "name": "messages",
+          "attribute": "messages",
+          "type": "array",
+          "default": "[]"
+        },
+        {
+          "name": "logo",
+          "attribute": "logo",
+          "type": "string",
+          "default": "\"\""
+        }
+      ]
+    },
+    {
+      "name": "alc-chat-form",
+      "path": "./components/chat-form/alc-chat-form.js",
+      "attributes": [
+        {
+          "name": "value",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "value",
+          "attribute": "value",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "events": [
+        {
+          "name": "chat-form-send",
+          "description": "Fired when send button is clicked"
+        }
+      ]
+    },
+    {
+      "name": "alc-chat-text",
+      "path": "./components/chat-text/alc-chat-text.js",
+      "attributes": [
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "avatar",
+          "type": "string"
+        }
+      ],
+      "properties": [
+        {
+          "name": "title",
+          "attribute": "title",
+          "type": "string"
+        },
+        {
+          "name": "avatar",
+          "attribute": "avatar",
+          "type": "string"
+        }
+      ]
+    }
+  ]
+}
