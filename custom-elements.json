@@ -6,53 +6,8 @@
       "path": "./components/button-primary/alc-button-primary.js"
     },
     {
-      "name": "alc-nav",
-      "path": "./components/nav/alc-nav.js",
-      "attributes": [
-        {
-          "name": "links",
-          "type": "array"
-        },
-        {
-          "name": "logo",
-          "type": "string"
-        },
-        {
-          "name": "logo-mobile",
-          "type": "string"
-        },
-        {
-          "name": "button-label",
-          "type": "string"
-        }
-      ],
-      "properties": [
-        {
-          "name": "links",
-          "attribute": "links",
-          "type": "array"
-        },
-        {
-          "name": "logo",
-          "attribute": "logo",
-          "type": "string"
-        },
-        {
-          "name": "logoMobile",
-          "attribute": "logo-mobile",
-          "type": "string"
-        },
-        {
-          "name": "buttonLabel",
-          "attribute": "button-label",
-          "type": "string"
-        }
-      ],
-      "events": [
-        {
-          "name": "open-diagnostic"
-        }
-      ]
+      "name": "alc-button-secondary",
+      "path": "./components/button-secondary/alc-button-secondary.js"
     }
   ]
 }
