@@ -160,6 +160,163 @@
           "name": "text"
         }
       ]
+    },
+    {
+      "name": "alc-chatbot",
+      "path": "./components/chatbot/alc-chatbot.js",
+      "description": "Chatbot",
+      "attributes": [
+        {
+          "name": "logo",
+          "type": "string"
+        },
+        {
+          "name": "close-image",
+          "type": "string"
+        },
+        {
+          "name": "user-icon",
+          "type": "string"
+        },
+        {
+          "name": "bot-icon",
+          "type": "string"
+        },
+        {
+          "name": "send-icon",
+          "type": "string"
+        },
+        {
+          "name": "chatbot-icon",
+          "type": "string"
+        },
+        {
+          "name": "opened",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "default-text-input",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "api",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "error-message",
+          "type": "string",
+          "default": "\"Lo sentimos, en estos momentos no podemos atenderle. Inténtelo más tarde.\""
+        },
+        {
+          "name": "messages",
+          "type": "array",
+          "default": "[]"
+        }
+      ],
+      "properties": [
+        {
+          "name": "logo",
+          "attribute": "logo",
+          "type": "string"
+        },
+        {
+          "name": "closeImg",
+          "attribute": "close-image",
+          "type": "string"
+        },
+        {
+          "name": "userIcon",
+          "attribute": "user-icon",
+          "type": "string"
+        },
+        {
+          "name": "botIcon",
+          "attribute": "bot-icon",
+          "type": "string"
+        },
+        {
+          "name": "sendIcon",
+          "attribute": "send-icon",
+          "type": "string"
+        },
+        {
+          "name": "chatbotIcon",
+          "attribute": "chatbot-icon",
+          "type": "string"
+        },
+        {
+          "name": "opened",
+          "attribute": "opened",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "defaultTextInput",
+          "attribute": "default-text-input",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "api",
+          "attribute": "api",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "errorMessage",
+          "attribute": "error-message",
+          "type": "string",
+          "default": "\"Lo sentimos, en estos momentos no podemos atenderle. Inténtelo más tarde.\""
+        },
+        {
+          "name": "messages",
+          "attribute": "messages",
+          "type": "array",
+          "default": "[]"
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--alc-chatbot-bubble-background",
+          "description": "bubble background color",
+          "default": "\"#FFF\""
+        },
+        {
+          "name": "--alc-chatbot-header-background",
+          "description": "bubble header background color",
+          "default": "\"#061b2b\""
+        },
+        {
+          "name": "--alc-chatbot-bubble-width",
+          "description": "bubble width",
+          "default": "\"350px\""
+        },
+        {
+          "name": "--alc-chatbot-bubble-height",
+          "description": "bubble height",
+          "default": "\"500px\""
+        }
+      ],
+      "cssParts": [
+        {
+          "name": "icon"
+        },
+        {
+          "name": "logo"
+        },
+        {
+          "name": "text"
+        },
+        {
+          "name": "container"
+        },
+        {
+          "name": "icon-send"
+        }
+      ]
     }
   ]
 }
