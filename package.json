@@ -1,0 +1,87 @@
+{
+  "name": "@aplanalacurva/root",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Aplana la curva Web Components",
+  "license": "MIT",
+  "author": "Aplana la curva",
+  "workspaces": [
+    "components/*"
+  ],
+  "scripts": {
+    "analyze": "lerna run analyze --stream --concurrency 1 && wca analyze components/*/*-*.js --outFile custom-elements.json",
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna run build --stream --concurrency 1",
+    "clean": "yarn clean:coverage && yarn clean:storybook && yarn clean:dist && yarn clean:node_modules",
+    "clean:coverage": "rimraf ./coverage ./components/*/coverage",
+    "clean:dist": "rimraf ./dist ./components/*/dist",
+    "clean:node_modules": "lerna clean --yes",
+    "clean:storybook": "rimraf ./storybook-static ./components/*/storybook-static",
+    "format": "yarn format:eslint && yarn format:prettier && yarn format:package",
+    "format:eslint": "eslint --ext .js,.html,.md,.json . --fix --ignore-path .gitignore",
+    "format:package": "sort-package-json package.json components/*/package.json",
+    "format:prettier": "prettier \"**/*.+(js|html|md|json)\" --write --ignore-path .gitignore",
+    "postinstall": "npm run bootstrap",
+    "lint": "yarn lint:eslint && yarn lint:prettier",
+    "lint:eslint": "eslint --ext .js,.html,.md,.json . --ignore-path .gitignore",
+    "lint:prettier": "prettier \"**/*.+(js|html|md|json)\" --check --ignore-path .gitignore",
+    "nuke": "lerna exec \"rm -f yarn.lock\" && lerna clean --yes && lerna bootstrap && lerna exec --stream -- \"test -f yarn.lock || yarn install --frozen-lockfile\"",
+    "publish": "lerna publish from-package --contents pkg",
+    "release": "lerna version",
+    "start": "es-dev-server --root",
+    "storybook": "start-storybook --root --debug-webpack",
+    "storybook:build": "build-storybook",
+    "storybook:build:serve": "es-dev-server --open --app-index storybook-static/index.html",
+    "test": "karma start --root --coverage",
+    "test:bs": "karma start karma.bs.config.js --root --coverage",
+    "test:prune-snapshots": "karma start --root --prune-snapshots",
+    "test:update-snapshots": "karma start --root --update-snapshots",
+    "test:watch": "karma start --root --auto-watch=true --single-run=false",
+    "preversion": "rimraf yarn.lock && lerna bootstrap",
+    "version": "npm run build -- --since && lerna run deploy --since && standard-version"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.+(js|html|md|json)": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "package.json": [
+      "sort-package-json"
+    ]
+  },
+  "dependencies": {
+    "path": "^0.12.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.0.0",
+    "@commitlint/config-conventional": "^8.0.0",
+    "@commitlint/config-lerna-scopes": "^8.0.0",
+    "@open-wc/demoing-storybook": "^1.0.0",
+    "@open-wc/eslint-config": "^2.0.0",
+    "@open-wc/prettier-config": "^0.1.0",
+    "@open-wc/testing": "^2.0.0",
+    "@open-wc/testing-karma": "^3.0.0",
+    "@open-wc/testing-karma-bs": "^1.0.0",
+    "@types/node": "^13.0.0",
+    "es-dev-server": "^1.0.0",
+    "eslint": "^6.0.0",
+    "eslint-import-resolver-webpack": "^0.12.0",
+    "eslint-plugin-json": "^2.0.0",
+    "eslint-plugin-markdown": "^1.0.0",
+    "glob": "^7.0.0",
+    "husky": "^4.0.0",
+    "lerna": "^3.0.0",
+    "lint-staged": "^10.0.0",
+    "rimraf": "^3.0.0",
+    "sort-package-json": "^1.0.0",
+    "standard-version": "^7.0.0",
+    "web-component-analyzer": "^1.0.0",
+    "webpack-merge": "^4.0.0"
+  }
+}
