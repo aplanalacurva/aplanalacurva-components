@@ -1,7 +1,7 @@
 {
   "name": "@aplanalacurva/button-secondary",
   "version": "0.0.0",
-  "license": "MIT",
+  "license": "GPLv3",
   "main": "index.js",
   "module": "index.js",
   "scripts": {

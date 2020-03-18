@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "description": "Aplana la curva Web Components",
-  "license": "MIT",
+  "license": "GPLv3",
   "author": "Aplana la curva",
   "workspaces": [
     "components/*"
